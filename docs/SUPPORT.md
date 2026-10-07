@@ -34,7 +34,7 @@ Back up your `local-profile/workspaces/` folder and editable builds. Extract a n
 
 ## Report an ordinary problem
 
-Use [the repository issue forms](https://github.com/Martin123132/im-ditto-public-candidate/issues/new/choose). Include:
+Use [the repository issue forms](https://github.com/Martin123132/im-ditto/issues/new/choose). Include:
 
 - Ditto version and whether you used the ZIP or source checkout.
 - Windows version, browser and whether you used ChatGPT/Bridge, local Codex or no AI.

@@ -1,6 +1,6 @@
 # Public release checklist
 
-Preview 8 is prepared in a separate private release-candidate repository. The original private repository and older releases stay intact. Publishing this candidate will expose only its own retained history and attached assets, not those of the original repo.
+Preview 8 is the owner-authorized public creator preview at `Martin123132/im-ditto`. It uses a clean release history. The original development history and older releases remain intact in `Martin123132/im-ditto-private-archive`, which must remain private.
 
 ## Release checks
 
@@ -14,7 +14,7 @@ Preview 8 is prepared in a separate private release-candidate repository. The or
 
 ## Owner publication
 
-The owner decides when to make the candidate public. If its repository name changes, update the current download and help links; keep old private history private. Do not force-push or overwrite the original repo to accomplish this.
+The owner authorized publication on 7 October 2026. Current download and help links use the final `im-ditto` name. Keep the separately named development archive private; do not force-push, overwrite or publish its history.
 
 After publication, check the release download and issue forms while signed out. Review GitHub’s visibility consequences before confirming. The COO email is the private security-reporting route; do not advertise GitHub private vulnerability reporting unless enabled and checked.
 

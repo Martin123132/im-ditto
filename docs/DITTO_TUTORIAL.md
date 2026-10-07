@@ -5,7 +5,7 @@ Want to **build your own** rather than open an example? Start with
 
 The completed [real creation journey](CREATOR_JOURNEY.md) includes the brief,
 shared work, export, restart and feature update. The new three-minute
-[creation-film composition](https://github.com/Martin123132/im-ditto-public-candidate/tree/main/tutorials/make-your-own) is ready for
+[creation-film composition](https://github.com/Martin123132/im-ditto/tree/main/tutorials/make-your-own) is ready for
 visual review before its final MP4 export. It is separate from the approved
 connection reference below.
 

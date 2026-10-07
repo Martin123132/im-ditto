@@ -14,7 +14,7 @@ The owner reports that an independent user built and used their own I’m. Their
 
 ## Checks and evidence
 
-[Release readiness](docs/RELEASE_READINESS.md) records the current candidate checks. [Release checks](docs/RELEASE_CHECKS.md) preserves dated earlier evidence and explains the required normal-launch check. A test marked skipped is not a pass; local checks are not a GitHub Actions result.
+[Release readiness](docs/RELEASE_READINESS.md) records the current release checks. [Release checks](docs/RELEASE_CHECKS.md) preserves dated earlier evidence and explains the required normal-launch check. A test marked skipped is not a pass; local checks are not a GitHub Actions result.
 
 The walkthrough was built through ChatGPT and Bridge on the owner’s PC, with shared edits, a usable export, restart and an update preserving work. Read [the creation journey](docs/CREATOR_JOURNEY.md) for its actual scope. A starter smoke test is not further evidence of AI creating a novel app.
 
@@ -30,6 +30,6 @@ The designated starter is MIT licensed; creators choose terms for their own addi
 
 ## Source and release scope
 
-This candidate starts a clean Git history without copying previous private commits, tags, release archives, personal profiles or connector material. Original repositories and releases remain unchanged. Attribution and inherited licence notices are retained; a clean history does not cancel earlier rights.
+This release starts a clean Git history without copying previous private commits, tags, release archives, personal profiles or connector material. The original development repository and older releases remain private, with their contents unchanged. Attribution and inherited licence notices are retained; a clean history does not cancel earlier rights.
 
-There is no I’m-Store, payments, publisher certification, hostile-code containment or arbitrary-app guarantee in this preview. Public visibility remains the owner’s release decision.
+There is no I’m-Store, payments, publisher certification, hostile-code containment or arbitrary-app guarantee in this preview. The owner authorized this creator preview’s public launch on 7 October 2026.

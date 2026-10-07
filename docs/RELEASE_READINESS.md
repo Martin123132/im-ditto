@@ -1,13 +1,13 @@
 # I’m-Ditto preview 8 release readiness
 
-Prepared on 7 October 2026 in the separate private [release-candidate repository](https://github.com/Martin123132/im-ditto-public-candidate). The original repository and preview 5–7 archives remain unchanged. Public visibility remains the owner’s decision.
+Prepared on 7 October 2026 for the [I’m-Ditto public creator preview](https://github.com/Martin123132/im-ditto). The original development history and preview 5–7 archives remain private in a separate archive repository. The owner has authorized publication of this clean release.
 
 ## Completed checks
 
 | Check | Result |
 | --- | --- |
 | Local full suite on Windows with Node 24.15.0 and FFmpeg | 53 passed, 1 external-Bridge check skipped, 0 failed |
-| GitHub Windows source checks on Node 22 and 24 | Both passed on the corrected source; [recorded run](https://github.com/Martin123132/im-ditto-public-candidate/actions/runs/37555843253) |
+| GitHub Windows source checks on Node 22 and 24 | Both passed on the corrected source; [recorded run](https://github.com/Martin123132/im-ditto/actions/runs/37555843253) |
 | Incorrect Windows profile casing reproduction | Failed before the correction; passed afterward, with junction rejection retained |
 | Portable fresh-profile journey using bundled Node and no global Node/FFmpeg on PATH | Creator package review/install, connection check, useful HTML/JSON exports and restart passed |
 | Portable app update and rollback | Saved project remained equal after both operations |
@@ -29,7 +29,7 @@ Text/package scans look for recognised patterns; they are not security certifica
 
 ## Owner publication
 
-The release candidate and its Windows prerelease stay private until the owner changes visibility. If the candidate is renamed, update current download and support links. Check the download and issue form while signed out after publication; they cannot be publicly tested while the repo is private.
+The release uses the final repository name `im-ditto`; current download and support links point there. The original development repository is separately named `im-ditto-private-archive` and must remain private. Final launch checks cover the repository, Windows download and issue route without authentication.
 
 The COO email is the chosen private reporting route. No test email, delivery or response-time guarantee is claimed. The licensing split and company launcher inclusion are owner-approved; custom terms are not solicitor-reviewed. Earlier grants remain valid.
 

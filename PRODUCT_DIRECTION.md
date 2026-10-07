@@ -30,6 +30,6 @@ Creation is the default landing page, with editable starting briefs and optional
 
 The corrected launcher and optional Bridge reply-clock display are implemented. Accessibility remains a separate project, not a release dependency. Missing Bridge clocks do not block creation or ordinary local use.
 
-Preview 8 adds creator licensing, notice preservation and support information. Release preparation uses a separate clean-history candidate and a new Windows archive; older private repositories and release bytes remain intact. Public visibility is the owner’s decision. The next product feedback should come from people making their own workspaces, not from expanding the built-in catalogue.
+Preview 8 adds creator licensing, notice preservation and support information. The public preview uses a separate clean release history and a new Windows archive; older development history and release bytes remain private and intact. The owner authorized this preview’s public launch on 7 October 2026. The next product feedback should come from people making their own workspaces, not from expanding the built-in catalogue.
 
 I’m-Ditto and I’m-Store remain the chosen working brand. This is not trademark clearance or a claim of exclusivity over “Ditto.” Store features remain future work.

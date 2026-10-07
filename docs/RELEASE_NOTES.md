@@ -2,7 +2,7 @@
 
 The current release candidate is **0.1.0-preview.8**: creator licensing and notice preservation, support information, and automated Windows source checks. It retains the creator-first workflow, corrected Windows launcher and optional Bridge reply clocks.
 
-[Download preview 8](https://github.com/Martin123132/im-ditto-public-candidate/releases/tag/v0.1.0-preview.8) · [Preview 8 changes](releases/0.1.0-preview.8.md)
+[Download preview 8](https://github.com/Martin123132/im-ditto/releases/tag/v0.1.0-preview.8) · [Preview 8 changes](releases/0.1.0-preview.8.md)
 
 ## Earlier versions
 

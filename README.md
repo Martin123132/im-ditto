@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/images/im-ditto-banner.svg" alt="I'm-Ditto — Make a workspace that works like you." width="960"></p>
 
 <p align="center"><strong>Your idea. Your AI. Your own kind of app.</strong></p>
-<p align="center"><a href="https://github.com/Martin123132/im-ditto-public-candidate/releases/tag/v0.1.0-preview.8">Download the Windows preview</a> · <a href="docs/MAKE_YOUR_OWN_IM.md">Make your first I’m</a> · <a href="docs/CREATOR_JOURNEY.md">See a real build</a> · <a href="REVIEW.md">Review this version</a></p>
+<p align="center"><a href="https://github.com/Martin123132/im-ditto/releases/tag/v0.1.0-preview.8">Download the Windows preview</a> · <a href="docs/MAKE_YOUR_OWN_IM.md">Make your first I’m</a> · <a href="docs/CREATOR_JOURNEY.md">See a real build</a> · <a href="REVIEW.md">Review this version</a></p>
 
 **I’m-Ditto helps you make a workspace around the way you work.** Describe a job, ask your connected AI to build the controls and tools, then use that workspace together. You click and edit; your AI works on the same saved project.
 

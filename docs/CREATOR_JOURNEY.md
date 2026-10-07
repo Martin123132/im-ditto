@@ -54,7 +54,7 @@ Your subject does not have to be music. [Make your own I’m →](MAKE_YOUR_OWN_
 
 - Initial package identity: `c5023902ac761d982628bae3d229bbea4da34784e852d913901e3c0bf5a49aab`.
 - Updated package identity: `ac9a45bb4ac3de153300a92afc1a9b69e22b14ce12254369c00097d9515c5f40`.
-- The review source and repeatable non-browser checks are in [the walkthrough example](https://github.com/Martin123132/im-ditto-public-candidate/tree/main/examples/rehearsal-desk), outside the install catalogue.
+- The review source and repeatable non-browser checks are in [the walkthrough example](https://github.com/Martin123132/im-ditto/tree/main/examples/rehearsal-desk), outside the install catalogue.
 - Screens are actual milestones, not continuous footage. The original songs and notes are fictional test data.
 - The tests do not establish clean-OS installation, independent novice usability, arbitrary-app generation, complete accessibility or security against hostile native code.
 - Private chat history, Bridge credentials, host tokens and live profiles are not included in this repository.
