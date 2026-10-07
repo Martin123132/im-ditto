@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head></head><body><template>
+<style>
+@font-face{font-family:Montserrat;src:url('assets/montserrat-400.woff2')}@font-face{font-family:Montserrat;src:url('assets/montserrat-700.woff2');font-weight:700}@font-face{font-family:Plex;src:url('assets/ibm-plex-mono-400.woff2')}
+#root{width:100%;height:100%;box-sizing:border-box;background:#0c171b;color:#f4f7f3;font-family:Montserrat,sans-serif;padding:64px 72px 44px;display:flex;flex-direction:column;gap:32px}
+#s04-use-bar{display:flex;align-items:center;justify-content:space-between;font:24px Plex,monospace;color:#c2ef89}
+#s04-use-main{display:grid;grid-template-columns:540px 1fr;gap:52px;align-items:center;flex:1;min-height:0}
+#s04-use-words{display:flex;flex-direction:column;gap:28px}
+#s04-use-title{font-size:58px;line-height:1.12;letter-spacing:-2px;margin:0;font-weight:700}
+#s04-use-caption{font-size:30px;line-height:1.5;margin:0;min-height:220px}
+#s04-use-note{font-size:24px;line-height:1.5;color:#b8c6ca;margin:0}
+#s04-use-screen{width:100%;height:730px;object-fit:contain;object-position:center;border:2px solid #35454a;border-radius:12px;background:#142025}
+#s04-use-track{width:100%;height:8px;background:#35454a;overflow:hidden}
+#s04-use-fill{width:100%;height:100%;background:#c2ef89;transform-origin:left center}
+#s04-use-footer{display:flex;justify-content:space-between;font:22px Plex,monospace;color:#b8c6ca}
+</style>
+<div data-hf-id="hf-fjpl" id="root" data-composition-id="s04-use" data-width="1920" data-height="1080" data-duration="36">
+<div data-hf-id="hf-mysq" id="s04-use-bar"><span data-hf-id="hf-owmt">I’M-DITTO / CREATE YOUR OWN</span><span data-hf-id="hf-xz5e">04 / 06</span></div>
+<div data-hf-id="hf-syqc" id="s04-use-main"><div data-hf-id="hf-pfmy" id="s04-use-words"><h1 data-hf-id="hf-s6zc" id="s04-use-title">You and your AI.<br data-hf-id="hf-x5px">One saved project.</h1><p data-hf-id="hf-xy83" id="s04-use-caption">Start with a small example. Save it through the interface, then ask your connected AI to inspect and edit that same workspace.</p><p data-hf-id="hf-u1zv" id="s04-use-note">Actual output from the installed app. Fictional song titles; no physical printing claimed.</p></div><img data-hf-id="hf-fqj4" id="s04-use-screen" src="assets/06-printable-plan.png" alt="Actual creator-journey screen"></div>
+<div data-hf-id="hf-8qbs" id="s04-use-track"><div data-hf-id="hf-sv5g" id="s04-use-fill"></div></div>
+<div data-hf-id="hf-dknm" id="s04-use-footer"><span data-hf-id="hf-u65h">Real milestone captures · assisted walkthrough</span><span data-hf-id="hf-w7m5">Two Hands Network</span></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true}), sequence=[{"t":0,"text":"Start with a small example. Save it through the interface, then ask your connected AI to inspect and edit that same workspace."},{"t":12,"text":"Here, ChatGPT kept our first song, added practice notes and a second song. The open app showed the changes automatically."},{"t":24,"text":"Check a real output. This printable plan contains both songs, the notes and a 32-minute rehearsal schedule. Nothing was uploaded."}], driver={t:0}, caption=document.querySelector('#s04-use-caption');
+tl.fromTo('#s04-use-fill',{scaleX:0},{scaleX:1,duration:36,ease:'none'},0);
+tl.to(driver,{t:36,duration:36,ease:'none',onUpdate:()=>{let text=sequence[0].text;for(let i=sequence.length-1;i>=0;i--){if(driver.t>=sequence[i].t){text=sequence[i].text;break;}}caption.textContent=text;}},0);
+window.__timelines['s04-use']=tl;
+</script></template></body></html>

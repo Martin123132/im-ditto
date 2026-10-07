@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c131b">
+  <title>I'm-Ditto — Music video studio</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/></symbol>
+    <symbol id="i-audio" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="17" cy="16" rx="3" ry="3"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7V4h7l3 3h8v13H3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M4 3h13l4 4v14H3V3h1Zm3 0v7h10V3M7 21v-7h10v7"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4Zm12-1c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M5 5v6h6M5 11a8 8 0 1 1 0 5"/></symbol>
+  </svg>
+
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="I'm-Ditto Music video studio home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+      <span>I'm-Ditto<span class="brand-dot">.</span></span>
+    </a>
+    <span class="header-divider"></span>
+    <div class="workspace-identity"><strong>Music video studio</strong><span>Your sound. Your sequence.</span></div>
+    <div class="header-end"><span class="local-label"><i></i> Local workspace</span><span class="example-label">EXAMPLE 01</span></div>
+  </header>
+
+  <main class="workspace">
+    <section class="project-bar" aria-label="Project controls">
+      <div class="project-name-group">
+        <span class="eyebrow">CURRENT PROJECT</span>
+        <label class="sr-only" for="project-name">Project name</label>
+        <input id="project-name" class="project-name" value="" maxlength="100" placeholder="Untitled project" autocomplete="off" disabled>
+      </div>
+      <div class="save-indicator" id="save-indicator" role="status"><span class="status-dot"></span><span id="save-label">Connecting…</span></div>
+      <button id="save-project" class="button quiet" disabled><svg><use href="#i-save"/></svg>Save</button>
+      <div class="open-project-group">
+        <label class="sr-only" for="project-picker">Open a saved project</label>
+        <select id="project-picker" title="Open a saved project"><option value="">Open project…</option></select>
+      </div>
+      <button id="new-project" class="button quiet"><svg><use href="#i-plus"/></svg>New</button>
+    </section>
+
+    <section id="connection-error" class="notice error-notice" hidden role="alert"></section>
+    <section id="conflict" class="notice conflict-notice" hidden role="alert">
+      <div><strong>Saved changes are waiting.</strong><span id="conflict-message">Your pending fields are still here. Choose which version to continue with.</span></div>
+      <button id="apply-draft" class="button small">Apply my pending fields</button>
+      <button id="load-remote" class="button quiet small" title="Replace the pending fields with the latest saved project">Load saved version</button>
+    </section>
+
+    <div class="studio-grid">
+      <aside class="media-panel panel" aria-labelledby="media-heading">
+        <div class="panel-heading"><div><span class="eyebrow">YOUR INGREDIENTS</span><h2 id="media-heading">Media shelf <span class="count" id="asset-count">0</span></h2></div><svg class="muted-icon"><use href="#i-image"/></svg></div>
+        <div class="import-zone" id="import-zone">
+          <div class="import-icon"><svg><use href="#i-upload"/></svg></div>
+          <strong>Bring your own media</strong>
+          <p>Drop images or an audio track here.</p>
+          <button id="import-media" class="button secondary small">Choose files <svg><use href="#i-plus"/></svg></button>
+          <span class="import-hint">PNG, JPG, WebP, BMP · WAV, MP3, M4A, OGG, FLAC</span>
+          <input type="file" id="media-files" accept=".png,.jpg,.jpeg,.webp,.bmp,.wav,.mp3,.m4a,.ogg,.flac,.aac" multiple hidden>
+        </div>
+        <div id="import-progress" class="inline-status" role="status" hidden></div>
+        <div class="shelf-tabs" aria-label="Media type"><button class="shelf-tab is-active" id="filter-all" aria-pressed="true">All media</button><button class="shelf-tab" id="filter-images" aria-pressed="false">Images</button><button class="shelf-tab" id="filter-audio" aria-pressed="false">Audio</button></div>
+        <div id="media-list" class="media-list"><div class="empty-shelf">Your media will appear here.<br>Choose an image to add a shot.</div></div>
+        <div class="shelf-foot"><span class="tiny-dot"></span><span>Imports are copied into this project.</span></div>
+      </aside>
+
+      <section class="preview-panel panel" aria-labelledby="preview-heading">
+        <div class="preview-heading">
+          <div><span class="eyebrow" id="preview-kicker">LIVE STORYBOARD</span><h2 id="preview-heading">Make it move<span class="accent-dot">.</span></h2></div>
+          <div class="format-picker" role="group" aria-label="Video format">
+            <button id="format-landscape" class="format-button is-active" aria-pressed="true" title="Landscape, 1280 by 720"><span class="shape landscape"></span>16:9</button>
+            <button id="format-portrait" class="format-button" aria-pressed="false" title="Portrait, 720 by 1280"><span class="shape portrait"></span>9:16</button>
+          </div>
+        </div>
+        <div class="preview-surround">
+          <div class="preview-stage" id="preview-stage">
+            <canvas id="preview-canvas" width="1280" height="720" aria-label="Storyboard preview"></canvas>
+            <video id="output-video" controls playsinline preload="metadata" hidden aria-label="Completed rendered music video"></video>
+            <div class="preview-empty" id="preview-empty"><span class="empty-orbits" aria-hidden="true"><i></i><i></i></span><h3>A little sound. A little vision.</h3><p>Add a picture from the media shelf<br>to begin your sequence.</p></div>
+            <span class="preview-watermark" aria-hidden="true">I'M-DITTO / STUDIO</span>
+          </div>
+        </div>
+        <div class="preview-mode-bar"><span id="preview-detail">Your storyboard, in real time</span><div class="view-toggle" role="group" aria-label="Preview source"><button id="show-live" class="is-active" aria-pressed="true">Storyboard</button><button id="show-render" aria-pressed="false" disabled>Rendered MP4</button></div></div>
+        <div id="live-transport" class="transport">
+          <button id="restart-preview" class="icon-button" title="Restart preview" aria-label="Restart preview"><svg><use href="#i-reset"/></svg></button>
+          <button id="play-preview" class="play-button" aria-label="Play storyboard" disabled><svg><use id="play-icon" href="#i-play"/></svg></button>
+          <span id="playback-time" class="timecode">00:00.0 <span>/ 00:00.0</span></span>
+          <label class="sr-only" for="seek-preview">Seek storyboard</label><input type="range" id="seek-preview" min="0" max="1" value="0" step="0.01" disabled>
+          <button id="mute-preview" class="icon-button" title="Mute preview" aria-label="Mute preview" aria-pressed="false"><svg><use href="#i-volume"/></svg></button>
+          <label class="sr-only" for="volume-preview">Preview volume</label><input type="range" id="volume-preview" min="0" max="1" value="0.75" step="0.05">
+        </div>
+        <div class="audio-strip"><span class="audio-strip-icon"><svg><use href="#i-audio"/></svg></span><div><span class="eyebrow">SOUNDTRACK</span><strong id="audio-name">No track selected</strong></div><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span id="audio-length" class="audio-duration"></span><button id="remove-audio" class="icon-button" title="Remove soundtrack from sequence" aria-label="Remove soundtrack from sequence" hidden><svg><use href="#i-trash"/></svg></button></div>
+      </section>
+
+      <aside class="inspector-panel panel" aria-labelledby="inspector-heading">
+        <div class="panel-heading"><div><span class="eyebrow">THE DETAILS</span><h2 id="inspector-heading">Shot inspector</h2></div><span class="shot-index" id="shot-index">—</span></div>
+        <div id="inspector-empty" class="inspector-empty"><span class="empty-lines" aria-hidden="true"></span><p>Select a shot to shape<br>its timing and words.</p></div>
+        <form id="shot-form" hidden>
+          <div class="selected-media"><img id="selected-thumb" alt=""><div><span class="eyebrow">SOURCE IMAGE</span><strong id="selected-source"></strong></div></div>
+          <label for="shot-duration">Duration <span>seconds</span></label>
+          <div class="duration-row"><button id="duration-minus" type="button" class="step-button" aria-label="Reduce duration by half a second">−</button><input id="shot-duration" type="number" min="0.5" max="60" step="0.1" required inputmode="decimal"><button id="duration-plus" type="button" class="step-button" aria-label="Increase duration by half a second">+</button></div>
+          <label for="shot-caption">Caption / title <span id="caption-count">0 / 180</span></label>
+          <textarea id="shot-caption" rows="4" maxlength="180" placeholder="Give this moment a few words."></textarea>
+          <p class="field-hint">Centered over the picture. Line breaks are preserved.</p>
+          <button id="apply-shot" type="submit" class="button secondary full-width" disabled><svg><use href="#i-check"/></svg>Apply shot</button>
+          <div class="shot-actions"><button id="move-earlier" type="button" class="button quiet small"><svg><use href="#i-left"/></svg>Earlier</button><button id="move-later" type="button" class="button quiet small">Later<svg><use href="#i-right"/></svg></button><button id="remove-shot" type="button" class="icon-button danger" title="Remove this shot" aria-label="Remove this shot"><svg><use href="#i-trash"/></svg></button></div>
+        </form>
+        <div class="render-panel">
+          <div class="render-heading"><div><span class="eyebrow">READY WHEN YOU ARE</span><h2>Make the video</h2></div><span class="render-spark" aria-hidden="true">✳</span></div>
+          <div class="output-summary"><span id="output-resolution">1280 × 720</span><span>MP4 · 24 fps</span><span id="output-duration">0.0 sec</span></div>
+          <p class="render-note">Pictures, captions, soundtrack.<br>Soft fades between every shot.</p>
+          <button id="start-render" class="button primary full-width" disabled>Render video<svg><use href="#i-arrow"/></svg></button>
+          <div class="render-job" id="render-job" hidden>
+            <div class="render-job-top"><strong id="render-status">Ready</strong><span id="render-percent"></span></div>
+            <progress id="render-progress" max="100" value="0" aria-label="Render progress"></progress>
+            <p id="render-stage" role="status"></p>
+            <div class="render-buttons"><button id="cancel-render" class="button quiet small" hidden>Cancel render</button><button id="watch-render" class="button secondary small" hidden><svg><use href="#i-play"/></svg>Watch</button><button id="open-output" class="button quiet small" hidden><svg><use href="#i-folder"/></svg>Open output</button></div>
+            <p id="render-error" class="render-error" hidden></p>
+          </div>
+          <div class="history-wrap" id="history-wrap" hidden><label for="render-history">Saved renders</label><select id="render-history"></select></div>
+        </div>
+      </aside>
+
+      <section class="storyboard-panel panel" aria-labelledby="storyboard-heading">
+        <div class="storyboard-heading"><div><span class="eyebrow">ONE MOMENT AT A TIME</span><h2 id="storyboard-heading">The sequence <span class="count" id="shot-count">0</span></h2></div><div class="sequence-meta"><span id="sequence-total">0.0 seconds</span><span class="separator-dot"></span><span>Drag to reorder · or use Earlier / Later</span></div></div>
+        <div class="storyboard-track" id="storyboard-track" aria-label="Storyboard shots"><div class="empty-storyboard"><svg><use href="#i-plus"/></svg><span>Your first shot starts here. Add an image from the shelf.</span></div></div>
+      </section>
+    </div>
+    <footer class="workspace-footer"><span><span class="footer-mark" aria-hidden="true">”</span>A workspace for your next idea.</span><span id="project-footer">Saved locally · Ready for you and your AI</span></footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="new-project-dialog">
+    <form id="new-project-form"><span class="eyebrow">FRESH CANVAS</span><h2>Start something new.</h2><label for="new-project-name">Project name</label><input id="new-project-name" required maxlength="100" placeholder="My next music video" autocomplete="off"><div class="dialog-actions"><button type="button" id="close-new-dialog" class="button quiet">Cancel</button><button class="button primary" type="submit">Create project<svg><use href="#i-arrow"/></svg></button></div></form>
+  </dialog>
+</body>
+</html>

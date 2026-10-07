@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head></head><body><template>
+<style>
+@font-face{font-family:Montserrat;src:url('assets/montserrat-400.woff2')}@font-face{font-family:Montserrat;src:url('assets/montserrat-700.woff2');font-weight:700}@font-face{font-family:Plex;src:url('assets/ibm-plex-mono-400.woff2')}
+#root{width:100%;height:100%;box-sizing:border-box;background:#0c171b;color:#f4f7f3;font-family:Montserrat,sans-serif;padding:64px 72px 44px;display:flex;flex-direction:column;gap:32px}
+#s05-keep-bar{display:flex;align-items:center;justify-content:space-between;font:24px Plex,monospace;color:#c2ef89}
+#s05-keep-main{display:grid;grid-template-columns:540px 1fr;gap:52px;align-items:center;flex:1;min-height:0}
+#s05-keep-words{display:flex;flex-direction:column;gap:28px}
+#s05-keep-title{font-size:58px;line-height:1.12;letter-spacing:-2px;margin:0;font-weight:700}
+#s05-keep-caption{font-size:30px;line-height:1.5;margin:0;min-height:220px}
+#s05-keep-note{font-size:24px;line-height:1.5;color:#b8c6ca;margin:0}
+#s05-keep-screen{width:100%;height:730px;object-fit:contain;object-position:center;border:2px solid #35454a;border-radius:12px;background:#142025}
+#s05-keep-track{width:100%;height:8px;background:#35454a;overflow:hidden}
+#s05-keep-fill{width:100%;height:100%;background:#c2ef89;transform-origin:left center}
+#s05-keep-footer{display:flex;justify-content:space-between;font:22px Plex,monospace;color:#b8c6ca}
+</style>
+<div data-hf-id="hf-4tdx" id="root" data-composition-id="s05-keep" data-width="1920" data-height="1080" data-duration="24">
+<div data-hf-id="hf-wz19" id="s05-keep-bar"><span data-hf-id="hf-owmt">I’M-DITTO / CREATE YOUR OWN</span><span data-hf-id="hf-lp8f">05 / 06</span></div>
+<div data-hf-id="hf-afv9" id="s05-keep-main"><div data-hf-id="hf-q2k9" id="s05-keep-words"><h1 data-hf-id="hf-lwhj" id="s05-keep-title">Close it.<br data-hf-id="hf-x5px">Your work stays.</h1><p data-hf-id="hf-w83p" id="s05-keep-caption">Save first. Use Stop in My I’ms, then Start workspace and reopen it. Closing a browser tab alone does not stop the app.</p><p data-hf-id="hf-02d4" id="s05-keep-note">Actual post-restart screen: revision 5 retained. Save drafts before closing.</p></div><img data-hf-id="hf-9gs9" id="s05-keep-screen" src="assets/07-after-restart.png" alt="Actual creator-journey screen"></div>
+<div data-hf-id="hf-b19z" id="s05-keep-track"><div data-hf-id="hf-5bnd" id="s05-keep-fill"></div></div>
+<div data-hf-id="hf-yg0b" id="s05-keep-footer"><span data-hf-id="hf-u65h">Real milestone captures · assisted walkthrough</span><span data-hf-id="hf-w7m5">Two Hands Network</span></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true}), sequence=[{"t":0,"text":"Save first. Use Stop in My I’ms, then Start workspace and reopen it. Closing a browser tab alone does not stop the app."},{"t":12,"text":"Our rehearsal reopened with both songs, all notes and the same saved export. Saved projects live separately from installed code."}], driver={t:0}, caption=document.querySelector('#s05-keep-caption');
+tl.fromTo('#s05-keep-fill',{scaleX:0},{scaleX:1,duration:24,ease:'none'},0);
+tl.to(driver,{t:24,duration:24,ease:'none',onUpdate:()=>{let text=sequence[0].text;for(let i=sequence.length-1;i>=0;i--){if(driver.t>=sequence[i].t){text=sequence[i].text;break;}}caption.textContent=text;}},0);
+window.__timelines['s05-keep']=tl;
+</script></template></body></html>

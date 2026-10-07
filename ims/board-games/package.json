@@ -1,0 +1,13 @@
+{
+  "name": "im-board-games",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "A local board-game prototyping workshop for the I'm-Ditto host.",
+  "scripts": {
+    "test": "node --test tests/core.test.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

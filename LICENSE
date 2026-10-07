@@ -1,0 +1,27 @@
+# I’m-Ditto licensing
+
+Copyright 2026 Two Hands Network Ltd
+
+Required Notice: Copyright 2026 Two Hands Network Ltd
+
+This distribution uses separate licences for its host, starter, retained legacy material and third-party works. A licence applies only to rights the named licensor holds. More specific existing third-party notices prevail for their material.
+
+## File schedule
+
+- Core: `ditto/`, host tests, new release-check and workflow code. These use `LICENSES/Im-Ditto-Core-1.0.md` (LicenseRef-Im-Ditto-Core-1.0).
+- Creator starter: the original files in `creator-template/` use MIT, supplied as `creator-template/LICENSE-DITTO-STARTER.txt`. `NOTICE-DITTO-STARTER.md` explains how copied portions differ from creators' own additions. No Core restriction is added to these MIT files.
+- Legacy foundation and integration: `src/`, `integrations/`, `tools/`, `Launch Im-Ditto.cmd`, `UPSTREAM_PC_BRIDGE_README.md` and `UPSTREAM_PACKAGE_SNAPSHOT.json` retain the terms in `LICENSES/Legacy-PC-Bridge-Ditto.md`.
+- Company launcher: `ditto/browser.mjs`, `ditto/launch.mjs`, `tests/ditto-browser.test.mjs` and `docs/DITTO_QUICK_START.md` are included in the Core terms for this distribution. Earlier grants remain unchanged.
+- Existing examples and evidence: `ims/`, `im-catalogue/`, `examples/` and `tutorials/` retain their existing legacy terms, except works carrying a specific third-party licence. This release does not relicense their media, rebuild old bundles or put those directories under MIT.
+- Node runtime and tutorial dependencies: their own notices apply; see `THIRD_PARTY_NOTICES.md`, `runtime-notices/` and `tutorials/make-your-own/licenses/`. A portable build also includes `runtime/LICENSE-node.txt`.
+- Remaining original company documentation and configuration use the Core licence's permissions unless expressly identified otherwise above. Licence texts govern according to their own terms. Product marks and logos are subject to `TRADEMARKS.md`, not a right to brand a competing product as official.
+
+For ordinary creators, the starter is reusable in free or paid apps and the Core permits task-specific applications and internal business use. The Core-derived general-purpose platform restriction does not claim ownership of independently written compatible software or of an AI app-store idea. Read the full terms and the retained legacy exceptions rather than treating this paragraph as a blanket licence for every dependency.
+
+## Earlier versions
+
+This schedule accompanies the new, unreleased source revision. It does not alter preview 5, 6 or 7 archives or revoke valid grants already received with those or PC Bridge. Earlier rights still apply to the material those grants cover. New terms cannot retrospectively remove those rights.
+
+The Core is source-available, not OSI-approved open source. The designated MIT starter is permissive. Creator-owned additions and user data do not become company property by using Ditto.
+
+Private licensing enquiries: Glyn, COO of Two Hands Network Ltd, glyn@twohandsnetwork.co.uk. See `COMMERCIAL_LICENSE.md` and `CREATOR_RIGHTS.md`.

@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0-preview.5",
+  "repository": "Martin123132/im-ditto",
+  "intendedVisibility": "private",
+  "archive": "Im-Ditto-0.1.0-preview.5-Windows-x64.zip",
+  "bytes": 48870360,
+  "sha256": "ee5006d3f1f5a7e2aa17309a1eba5b87e286d0ce545159fbdb617128d1c6a046",
+  "archiveMembersIndividuallyVerified": 62,
+  "packagedRuntime": "Node.js v24.15.0",
+  "ffmpegBundled": false,
+  "profileIncluded": false,
+  "hostRegressionTests": {"passed": 35, "failed": 0},
+  "portableFreshProfileSmoke": "pass",
+  "cleanOSInstallationTest": false,
+  "newCreationFilm": {"durationSeconds": 180, "compositionIncludedInSource": true, "finalMp4": "awaiting owner visual-review approval"},
+  "existingSetupVideoIncluded": true
+}

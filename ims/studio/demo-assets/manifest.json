@@ -1,0 +1,63 @@
+{
+  "title": "Neon Atlas",
+  "original": true,
+  "generation": "Deterministic local procedural PNG artwork and synthesized PCM music; no source media.",
+  "createdAt": "2026-10-05T02:31:06.398Z",
+  "assets": [
+    {
+      "path": "D:\\PC-Bridge-Public-Demo\\im-ditto-studio-example\\demo-assets\\01-signal.png",
+      "name": "01-signal.png",
+      "kind": "image",
+      "width": 1280,
+      "height": 720,
+      "bytes": 805953,
+      "sha256": "925a0044a03667d0846719e6c867d88fbad968eb2fd75163deb50aa57dcfb339"
+    },
+    {
+      "path": "D:\\PC-Bridge-Public-Demo\\im-ditto-studio-example\\demo-assets\\02-pulse.png",
+      "name": "02-pulse.png",
+      "kind": "image",
+      "width": 1280,
+      "height": 720,
+      "bytes": 866297,
+      "sha256": "6445a1fca7e2a10704bc17d622993ace905caefca54b845cf2ec4927e3faa013"
+    },
+    {
+      "path": "D:\\PC-Bridge-Public-Demo\\im-ditto-studio-example\\demo-assets\\03-orbit.png",
+      "name": "03-orbit.png",
+      "kind": "image",
+      "width": 1280,
+      "height": 720,
+      "bytes": 841508,
+      "sha256": "a6033a5f649aaebeac1346040f6f678510a50d9a5c652cd9dd0ab8f8b2148a33"
+    },
+    {
+      "path": "D:\\PC-Bridge-Public-Demo\\im-ditto-studio-example\\demo-assets\\04-spectrum.png",
+      "name": "04-spectrum.png",
+      "kind": "image",
+      "width": 1280,
+      "height": 720,
+      "bytes": 882787,
+      "sha256": "3d6d5b2ce72e3136f02a3442488e1cce4a041c8349cb97a10dd6799f85c32d33"
+    },
+    {
+      "path": "D:\\PC-Bridge-Public-Demo\\im-ditto-studio-example\\demo-assets\\05-horizon.png",
+      "name": "05-horizon.png",
+      "kind": "image",
+      "width": 1280,
+      "height": 720,
+      "bytes": 843149,
+      "sha256": "9862f4c72314a64fcb9190782688fe998663d0cec5492c28b8596fbfb5cf1391"
+    },
+    {
+      "path": "D:\\PC-Bridge-Public-Demo\\im-ditto-studio-example\\demo-assets\\neon-atlas-original.wav",
+      "name": "neon-atlas-original.wav",
+      "kind": "audio",
+      "duration": 20,
+      "sampleRate": 44100,
+      "channels": 2,
+      "bytes": 3528044,
+      "sha256": "eb1df6ae2b094960ccab205f279180f9b8b97b534c5c22df0d9a733e28961e87"
+    }
+  ]
+}

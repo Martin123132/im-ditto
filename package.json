@@ -1,0 +1,20 @@
+{
+  "name": "im-ditto-foundation",
+  "productName": "I'm-Ditto",
+  "version": "0.1.0-preview.8",
+  "description": "Make a personal workspace with your AI, then use and improve it together.",
+  "author": "Two Hands Network Ltd",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "main": "ditto/server.mjs",
+  "scripts": {
+    "start": "node ditto/launch.mjs",
+    "test": "node --test tests/ditto*.test.mjs",
+    "test:core": "node tests/run-core.mjs",
+    "test:media": "node --test tests/ditto-studio.test.mjs",
+    "check:release": "node tests/review-export.mjs --history",
+    "pack:studio": "node ditto/build.mjs studio"
+  }
+}

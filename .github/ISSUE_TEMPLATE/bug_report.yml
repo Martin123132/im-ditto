@@ -1,0 +1,60 @@
+name: Something is not working
+description: Report an installation, creation or workspace problem without sharing private work.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please keep passwords, pairing links, connection codes, private prompts and project files out of this report.
+        Security concerns must not go into a public issue. Read SECURITY.md first.
+        A short description and a harmless example are usually enough; do not attach your whole profile or log folder.
+  - type: input
+    id: version
+    attributes:
+      label: Which Ditto version?
+      description: Find it at the bottom of the dashboard. Also say whether you used the Windows ZIP or source checkout.
+      placeholder: "0.1.0-preview.8, Windows ZIP"
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where did it happen?
+      options:
+        - Downloading or opening Ditto
+        - Preparing a new I’m
+        - Building with my AI
+        - Reviewing or installing a package
+        - Connecting my AI to an installed I’m
+        - Using or updating an I’m
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you try, and what happened?
+      description: Include what you expected and the short error message, with private details removed.
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Windows and browser
+      placeholder: "Windows 11 x64, Edge"
+  - type: dropdown
+    id: connection
+    attributes:
+      label: How were you using it?
+      options:
+        - Just me, without a connected AI
+        - ChatGPT through PC Bridge
+        - Local Codex
+        - Another setup
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before sending
+      options:
+        - label: I removed credentials, connection codes and private project content.
+          required: true

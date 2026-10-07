@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head></head><body><template>
+<style>
+@font-face{font-family:Montserrat;src:url('assets/montserrat-400.woff2')}@font-face{font-family:Montserrat;src:url('assets/montserrat-700.woff2');font-weight:700}@font-face{font-family:Plex;src:url('assets/ibm-plex-mono-400.woff2')}
+#root{width:100%;height:100%;box-sizing:border-box;background:#0c171b;color:#f4f7f3;font-family:Montserrat,sans-serif;padding:64px 72px 44px;display:flex;flex-direction:column;gap:32px}
+#s01-brief-bar{display:flex;align-items:center;justify-content:space-between;font:24px Plex,monospace;color:#c2ef89}
+#s01-brief-main{display:grid;grid-template-columns:540px 1fr;gap:52px;align-items:center;flex:1;min-height:0}
+#s01-brief-words{display:flex;flex-direction:column;gap:28px}
+#s01-brief-title{font-size:58px;line-height:1.12;letter-spacing:-2px;margin:0;font-weight:700}
+#s01-brief-caption{font-size:30px;line-height:1.5;margin:0;min-height:220px}
+#s01-brief-note{font-size:24px;line-height:1.5;color:#b8c6ca;margin:0}
+#s01-brief-screen{width:100%;height:730px;object-fit:contain;object-position:center;border:2px solid #35454a;border-radius:12px;background:#142025}
+#s01-brief-track{width:100%;height:8px;background:#35454a;overflow:hidden}
+#s01-brief-fill{width:100%;height:100%;background:#c2ef89;transform-origin:left center}
+#s01-brief-footer{display:flex;justify-content:space-between;font:22px Plex,monospace;color:#b8c6ca}
+</style>
+<div data-hf-id="hf-4j86" id="root" data-composition-id="s01-brief" data-width="1920" data-height="1080" data-duration="24">
+<div data-hf-id="hf-axzu" id="s01-brief-bar"><span data-hf-id="hf-owmt">I’M-DITTO / CREATE YOUR OWN</span><span data-hf-id="hf-51sb">01 / 06</span></div>
+<div data-hf-id="hf-y0ck" id="s01-brief-main"><div data-hf-id="hf-yul6" id="s01-brief-words"><h1 data-hf-id="hf-avbv" id="s01-brief-title">Start with your job.</h1><p data-hf-id="hf-0mcf" id="s01-brief-caption">Open Make my I’m. Give your workspace a name and describe what you want to do—not how to code it.</p><p data-hf-id="hf-icyd" id="s01-brief-note">The original brief is shown again here. Use your own job, inputs and useful output.</p></div><img data-hf-id="hf-24ps" id="s01-brief-screen" src="assets/00-brief-recalled.png" alt="Actual creator-journey screen"></div>
+<div data-hf-id="hf-pxg8" id="s01-brief-track"><div data-hf-id="hf-sl5w" id="s01-brief-fill"></div></div>
+<div data-hf-id="hf-fede" id="s01-brief-footer"><span data-hf-id="hf-u65h">Real milestone captures · assisted walkthrough</span><span data-hf-id="hf-w7m5">Two Hands Network</span></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true}), sequence=[{"t":0,"text":"Open Make my I’m. Give your workspace a name and describe what you want to do—not how to code it."},{"t":8,"text":"Our brief: keep a set list and practice notes, let us and our AI edit them, then export a session plan."},{"t":16,"text":"Choose Prepare my I’m. Ditto creates a separate starter and a tailored build prompt. It has not built your app yet."}], driver={t:0}, caption=document.querySelector('#s01-brief-caption');
+tl.fromTo('#s01-brief-fill',{scaleX:0},{scaleX:1,duration:24,ease:'none'},0);
+tl.to(driver,{t:24,duration:24,ease:'none',onUpdate:()=>{let text=sequence[0].text;for(let i=sequence.length-1;i>=0;i--){if(driver.t>=sequence[i].t){text=sequence[i].text;break;}}caption.textContent=text;}},0);
+window.__timelines['s01-brief']=tl;
+</script></template></body></html>

@@ -1,0 +1,11 @@
+* text=auto
+*.exe binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+runtime-notices/LICENSE-node-*.txt -text -whitespace
+*.impack.json -text
+examples/rehearsal-desk/source/** -text
+tutorials/make-your-own/assets/gsap.min.js -text -whitespace
+tutorials/make-your-own/licenses/*.txt -text -whitespace

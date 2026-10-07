@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#183f37">
+<title>I’m-Board-Games · The prototype workshop</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Workshop navigation">
+    <a class="brand" href="/" aria-label="I’m-Board-Games home"><span class="brand-logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><strong>I’m-Board-Games</strong><small>THE PROTOTYPE WORKSHOP</small></span></a>
+    <div class="side-section"><p class="eyebrow">YOUR WORKBENCH</p>
+      <nav class="tabs" aria-label="Game sections">
+        <button data-tab="overview" class="nav-button active" aria-current="page"><span class="nav-icon">◈</span><span>The game</span><span class="nav-number">01</span></button>
+        <button data-tab="cards" class="nav-button"><span class="nav-icon">▤</span><span>Card workshop</span><span id="nav-card-count" class="nav-number">0</span></button>
+        <button data-tab="board" class="nav-button"><span class="nav-icon">▦</span><span>Board builder</span><span class="nav-number">03</span></button>
+        <button data-tab="kit" class="nav-button"><span class="nav-icon">↗</span><span>Make a kit</span><span class="nav-number">04</span></button>
+      </nav>
+    </div>
+    <div class="side-section project-section"><div class="side-heading"><p class="eyebrow">SAVED GAMES</p><button class="icon-button" id="new-project-side" aria-label="Create a game">+</button></div><div id="project-list" class="project-list"></div></div>
+    <div class="side-note"><div class="note-symbol">✦</div><strong>Good games start small.</strong><p>A few rules. A deck of cards.<br>An idea you can put on a table.</p><span class="local-label"><span></span>Saved on this computer</span></div>
+    <div class="side-footer">EXAMPLE 02 <span>BY I’M-DITTO</span></div>
+  </aside>
+  <main>
+    <header class="topbar"><div class="breadcrumb">Workshop <span>/</span> <span id="crumb-name">Your game</span></div><div class="top-actions"><span id="save-indicator" class="save-indicator" role="status"><i></i><span>Connecting…</span></span><button class="button secondary" id="new-project">+ New game</button><button class="button primary" id="export-top"><span>↗</span> Make printable kit</button></div></header>
+    <section class="hero"><div><p class="eyebrow" id="hero-eyebrow">FROM AN IDEA TO YOUR TABLE</p><h1 id="project-heading">Your next game starts here.</h1><p id="project-subtitle">Connecting to your saved workshop…</p></div><div class="hero-mark" aria-hidden="true"><span>✦</span><i></i></div></section>
+    <div id="sync-banner" class="sync-banner" hidden><div><strong>A newer saved version is available.</strong><p id="sync-message">Your unsaved draft is still in the editor.</p></div><button class="button secondary" id="reload-latest">Discard draft & reload</button></div>
+    <div id="content" aria-live="off"><div class="loading-panel"><div class="loading-dots">● ● ●</div><h2>Opening your workbench</h2><p>Your saved projects will appear here.</p></div></div>
+    <footer class="main-footer"><span>Rules, cards, board. All yours to change.</span><span id="revision-footer">Local workshop</span></footer>
+  </main>
+</div>
+<dialog id="new-dialog"><form id="new-form"><button class="dialog-close icon-button" type="button" id="close-new" aria-label="Close new game dialog">×</button><p class="eyebrow">A FRESH START</p><h2>What are we making?</h2><p class="muted">Start with a blank idea, or make a new copy of the original demo.</p><label>Game name<input id="new-name" name="name" maxlength="80" placeholder="My next great game" required></label><label>Starting point<select name="template" id="new-template"><option value="blank">Blank workshop</option><option value="lantern-circuit">Lantern Circuit · original demo</option></select></label><button class="button primary wide" type="submit">Create game <span>→</span></button></form></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

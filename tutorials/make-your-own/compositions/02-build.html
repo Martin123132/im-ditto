@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head></head><body><template>
+<style>
+@font-face{font-family:Montserrat;src:url('assets/montserrat-400.woff2')}@font-face{font-family:Montserrat;src:url('assets/montserrat-700.woff2');font-weight:700}@font-face{font-family:Plex;src:url('assets/ibm-plex-mono-400.woff2')}
+#root{width:100%;height:100%;box-sizing:border-box;background:#0c171b;color:#f4f7f3;font-family:Montserrat,sans-serif;padding:64px 72px 44px;display:flex;flex-direction:column;gap:32px}
+#s02-build-bar{display:flex;align-items:center;justify-content:space-between;font:24px Plex,monospace;color:#c2ef89}
+#s02-build-main{display:grid;grid-template-columns:540px 1fr;gap:52px;align-items:center;flex:1;min-height:0}
+#s02-build-words{display:flex;flex-direction:column;gap:28px}
+#s02-build-title{font-size:58px;line-height:1.12;letter-spacing:-2px;margin:0;font-weight:700}
+#s02-build-caption{font-size:30px;line-height:1.5;margin:0;min-height:220px}
+#s02-build-note{font-size:24px;line-height:1.5;color:#b8c6ca;margin:0}
+#s02-build-screen{width:100%;height:730px;object-fit:contain;object-position:center;border:2px solid #35454a;border-radius:12px;background:#142025}
+#s02-build-track{width:100%;height:8px;background:#35454a;overflow:hidden}
+#s02-build-fill{width:100%;height:100%;background:#c2ef89;transform-origin:left center}
+#s02-build-footer{display:flex;justify-content:space-between;font:22px Plex,monospace;color:#b8c6ca}
+</style>
+<div data-hf-id="hf-3eqc" id="root" data-composition-id="s02-build" data-width="1920" data-height="1080" data-duration="30">
+<div data-hf-id="hf-n949" id="s02-build-bar"><span data-hf-id="hf-owmt">I’M-DITTO / CREATE YOUR OWN</span><span data-hf-id="hf-ui0s">02 / 06</span></div>
+<div data-hf-id="hf-567t" id="s02-build-main"><div data-hf-id="hf-h8lp" id="s02-build-words"><h1 data-hf-id="hf-tvs2" id="s02-build-title">Build with your connected AI.</h1><p data-hf-id="hf-u83r" id="s02-build-caption">Copy the generated prompt into your connected ChatGPT or local Codex. The chat needs existing access to the build folder.</p><p data-hf-id="hf-p87r" id="s02-build-note">This uses an existing Bridge chat. Build time is condensed into milestone captures.</p></div><img data-hf-id="hf-57xm" id="s02-build-screen" src="assets/02-chatgpt-building.png" alt="Actual creator-journey screen"></div>
+<div data-hf-id="hf-3l6j" id="s02-build-track"><div data-hf-id="hf-dvmt" id="s02-build-fill"></div></div>
+<div data-hf-id="hf-04o7" id="s02-build-footer"><span data-hf-id="hf-u65h">Real milestone captures · assisted walkthrough</span><span data-hf-id="hf-w7m5">Two Hands Network</span></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true}), sequence=[{"t":0,"text":"Copy the generated prompt into your connected ChatGPT or local Codex. The chat needs existing access to the build folder."},{"t":10,"text":"The prompt names the starter, the brief, the test requirements and the finished package. No password belongs in it."},{"t":20,"text":"The AI writes the job-specific interface and tools. Ask what it tested and what remains unfinished. Keep the live app separate until review."}], driver={t:0}, caption=document.querySelector('#s02-build-caption');
+tl.fromTo('#s02-build-fill',{scaleX:0},{scaleX:1,duration:30,ease:'none'},0);
+tl.to(driver,{t:30,duration:30,ease:'none',onUpdate:()=>{let text=sequence[0].text;for(let i=sequence.length-1;i>=0;i--){if(driver.t>=sequence[i].t){text=sequence[i].text;break;}}caption.textContent=text;}},0);
+window.__timelines['s02-build']=tl;
+</script></template></body></html>

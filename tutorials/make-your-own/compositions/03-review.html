@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head></head><body><template>
+<style>
+@font-face{font-family:Montserrat;src:url('assets/montserrat-400.woff2')}@font-face{font-family:Montserrat;src:url('assets/montserrat-700.woff2');font-weight:700}@font-face{font-family:Plex;src:url('assets/ibm-plex-mono-400.woff2')}
+#root{width:100%;height:100%;box-sizing:border-box;background:#0c171b;color:#f4f7f3;font-family:Montserrat,sans-serif;padding:64px 72px 44px;display:flex;flex-direction:column;gap:32px}
+#s03-review-bar{display:flex;align-items:center;justify-content:space-between;font:24px Plex,monospace;color:#c2ef89}
+#s03-review-main{display:grid;grid-template-columns:540px 1fr;gap:52px;align-items:center;flex:1;min-height:0}
+#s03-review-words{display:flex;flex-direction:column;gap:28px}
+#s03-review-title{font-size:58px;line-height:1.12;letter-spacing:-2px;margin:0;font-weight:700}
+#s03-review-caption{font-size:30px;line-height:1.5;margin:0;min-height:220px}
+#s03-review-note{font-size:24px;line-height:1.5;color:#b8c6ca;margin:0}
+#s03-review-screen{width:100%;height:730px;object-fit:contain;object-position:center;border:2px solid #35454a;border-radius:12px;background:#142025}
+#s03-review-track{width:100%;height:8px;background:#35454a;overflow:hidden}
+#s03-review-fill{width:100%;height:100%;background:#c2ef89;transform-origin:left center}
+#s03-review-footer{display:flex;justify-content:space-between;font:22px Plex,monospace;color:#b8c6ca}
+</style>
+<div data-hf-id="hf-enct" id="root" data-composition-id="s03-review" data-width="1920" data-height="1080" data-duration="30">
+<div data-hf-id="hf-w4ng" id="s03-review-bar"><span data-hf-id="hf-owmt">I’M-DITTO / CREATE YOUR OWN</span><span data-hf-id="hf-si15">03 / 06</span></div>
+<div data-hf-id="hf-675a" id="s03-review-main"><div data-hf-id="hf-ovmk" id="s03-review-words"><h1 data-hf-id="hf-pict" id="s03-review-title">Review it before running it.</h1><p data-hf-id="hf-ofos" id="s03-review-caption">Back in Make my I’m, choose Check finished package. Review the files, requested access and the AI’s build report.</p><p data-hf-id="hf-8klw" id="s03-review-note">This capture stops at review. No trust or installation is implied.</p></div><img data-hf-id="hf-bw45" id="s03-review-screen" src="assets/03-package-review.png" alt="Actual creator-journey screen"></div>
+<div data-hf-id="hf-12ji" id="s03-review-track"><div data-hf-id="hf-veti" id="s03-review-fill"></div></div>
+<div data-hf-id="hf-n0ug" id="s03-review-footer"><span data-hf-id="hf-u65h">Real milestone captures · assisted walkthrough</span><span data-hf-id="hf-w7m5">Two Hands Network</span></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true}), sequence=[{"t":0,"text":"Back in Make my I’m, choose Check finished package. Review the files, requested access and the AI’s build report."},{"t":10,"text":"This rehearsal desk uses local saved data and a local browser connection. It needs no extra package or online service."},{"t":20,"text":"Installing is a separate decision. Trust only code you are comfortable running as your Windows user. The hash checks the bytes, not whether the code is safe."}], driver={t:0}, caption=document.querySelector('#s03-review-caption');
+tl.fromTo('#s03-review-fill',{scaleX:0},{scaleX:1,duration:30,ease:'none'},0);
+tl.to(driver,{t:30,duration:30,ease:'none',onUpdate:()=>{let text=sequence[0].text;for(let i=sequence.length-1;i>=0;i--){if(driver.t>=sequence[i].t){text=sequence[i].text;break;}}caption.textContent=text;}},0);
+window.__timelines['s03-review']=tl;
+</script></template></body></html>

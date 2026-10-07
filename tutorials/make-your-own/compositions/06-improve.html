@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><body><template>
+<style>
+@font-face{font-family:Montserrat;src:url('assets/montserrat-400.woff2')}@font-face{font-family:Montserrat;src:url('assets/montserrat-700.woff2');font-weight:700}@font-face{font-family:Plex;src:url('assets/ibm-plex-mono-400.woff2')}
+#root{width:100%;height:100%;box-sizing:border-box;background:#0c171b;color:#f4f7f3;font-family:Montserrat,sans-serif;padding:64px 72px 44px;display:flex;flex-direction:column;gap:32px}
+#s06-improve-bar{display:flex;align-items:center;justify-content:space-between;font:24px Plex,monospace;color:#c2ef89}
+#s06-improve-main{display:grid;grid-template-columns:540px 1fr;gap:52px;align-items:center;flex:1;min-height:0}
+#s06-improve-words{display:flex;flex-direction:column;gap:28px}
+#s06-improve-title{font-size:58px;line-height:1.12;letter-spacing:-2px;margin:0;font-weight:700}
+#s06-improve-caption{font-size:30px;line-height:1.5;margin:0;min-height:220px}
+#s06-improve-note{font-size:24px;line-height:1.5;color:#b8c6ca;margin:0}
+#s06-improve-screen{width:100%;height:730px;object-fit:contain;object-position:center;border:2px solid #35454a;border-radius:12px;background:#142025}
+#s06-improve-track{width:100%;height:8px;background:#35454a;overflow:hidden}
+#s06-improve-fill{width:100%;height:100%;background:#c2ef89;transform-origin:left center}
+#s06-improve-footer{display:flex;justify-content:space-between;font:22px Plex,monospace;color:#b8c6ca}
+</style>
+<div id="root" data-composition-id="s06-improve" data-width="1920" data-height="1080" data-duration="36">
+<div id="s06-improve-bar"><span>I’M-DITTO / CREATE YOUR OWN</span><span>06 / IMPROVE</span></div>
+<div id="s06-improve-main"><div id="s06-improve-words"><h1 id="s06-improve-title">Make it yours.</h1><p id="s06-improve-caption">Ask for the missing thing.<br>We asked for Duplicate song.</p><p id="s06-improve-note">Real 0.1.1 update: existing work preserved; new UI and finite-command feature tested.</p></div><img id="s06-improve-screen" src="assets/09-duplicate-controls.png" alt="Actual creator-journey screen"></div>
+<div id="s06-improve-track"><div id="s06-improve-fill"></div></div>
+<div id="s06-improve-footer"><span>Real milestone captures · assisted walkthrough</span><span>Two Hands Network</span></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true}), sequence=[{"t":0,"text":"Ask for the missing thing. We asked for Duplicate song."},{"t":9,"text":"Review the new version. Your saved work stays separate."},{"t":18,"text":"Try it by hand and with AI. Both now make an independent copy."},{"t":27,"text":"Your next I’m starts with a different job. Yours."}], driver={t:0}, caption=document.querySelector('#s06-improve-caption');
+tl.fromTo('#s06-improve-fill',{scaleX:0},{scaleX:1,duration:36,ease:'none'},0);
+tl.to(driver,{t:36,duration:36,ease:'none',onUpdate:()=>{let text=sequence[0].text;for(let i=sequence.length-1;i>=0;i--){if(driver.t>=sequence[i].t){text=sequence[i].text;break;}}caption.textContent=text;}},0);
+window.__timelines['s06-improve']=tl;
+</script></template></body></html>
