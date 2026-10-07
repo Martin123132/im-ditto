@@ -50,6 +50,18 @@ try{
   const creatorPrompt=await req('/api/setup/prompt',{}),creatorCode=/verify '([a-f0-9]{32})'/.exec(creatorPrompt.command)?.[1];
   assert.equal((await cli('verify',creatorCode)).ok,true);
   assert.equal((await req('/api/creator')).drafts[0].status,'installed');
-  console.log(JSON.stringify({creatorFixtureOnly:true,customImplementationClaim:false,creatorPackageReviewInstall:true,starterNoticesPreserved:true,customAppSetupAndCliConnection:true}));
+  const savedResult=await cli('call',draft.appId,'--','set','Portable saved work','Keep this through the update');assert.equal(savedResult.ok,true);
+  const savedProject=JSON.parse(savedResult.stdout);
+  await req('/api/apps/'+draft.appId+'/stop',{});
+  const manifestPath=path.join(draft.source,'im.json'),manifest=JSON.parse(await fs.readFile(manifestPath,'utf8'));manifest.version='0.1.1';
+  await fs.writeFile(manifestPath,JSON.stringify(manifest));
+  await exec(runtime,[path.join(root,'ditto/build.mjs'),'pack',draft.source,draft.output],{env,windowsHide:true,timeout:15000});
+  const update=await req('/api/creator/'+draft.id+'/review',{});assert.notEqual(update.sha256,reviewed.sha256);
+  await req('/api/creator/'+draft.id+'/install',{sha256:update.sha256,trust:update.sha256});
+  await req('/api/apps/'+draft.appId+'/start',{});
+  const afterUpdate=await cli('call',draft.appId,'--','inspect');assert.equal(afterUpdate.ok,true);assert.deepEqual(JSON.parse(afterUpdate.stdout),savedProject);
+  await req('/api/apps/'+draft.appId+'/stop',{});await req('/api/apps/'+draft.appId+'/rollback',{});await req('/api/apps/'+draft.appId+'/start',{});
+  const afterRollback=await cli('call',draft.appId,'--','inspect');assert.equal(afterRollback.ok,true);assert.deepEqual(JSON.parse(afterRollback.stdout),savedProject);
+  console.log(JSON.stringify({creatorFixtureOnly:true,customImplementationClaim:false,creatorPackageReviewInstall:true,starterNoticesPreserved:true,customAppSetupAndCliConnection:true,updateAndRollbackPreserveSavedWork:true}));
   console.log(JSON.stringify({ok:true,profile,runtime,nodeOnPath:false,ffmpegOnPath:false,cleanOS:false,initialApps:0,repeatedLaunchSameHost:true,missingStudioPrerequisitesReported:true,boardInstallStartInspect:true,localOnlySetupComplete:true,finiteCliConnectionCheck:true,providerCalls:0,firstCardAndHtmlJsonExports:true,restartPreservesWork:true,restartInvalidatesConnectionCheck:true,html:html.path,json:json.path,game:game.name}));
 }finally{if(url&&owner)await fetch(url+'/api/stop',{method:'POST',headers:{'Content-Type':'application/json','x-ditto-owner':owner},body:'{}'}).catch(()=>{});}
