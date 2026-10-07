@@ -15,8 +15,13 @@ export class Manager {
     this.registryFile=path.join(this.profile,'registry.json');
     try{this.registry=JSON.parse(await fs.readFile(this.registryFile,'utf8'));check(this.registry.version===1 && this.registry.apps && typeof this.registry.apps==='object','Invalid registry.');}
     catch(e){if(e.code!=='ENOENT')throw e;this.registry={version:1,apps:{}};await this.save();}
+    // Check links before resolving Windows casing/8.3 aliases. The inherited
+    // Bridge guard compares canonical paths exactly; do not weaken that guard.
+    const bridgeData=await safe(this.profile,'bridge-core'),workspace=await safe(this.profile,'workspaces');
+    await fs.mkdir(bridgeData,{recursive:true});await fs.mkdir(workspace,{recursive:true});
+    const dataDir=await safe(await fs.realpath(bridgeData)),workspaceDir=await safe(await fs.realpath(workspace));
     // Reuse PC Bridge's durable receipt chain in a separate, never-connected profile.
-    this.bridge=await new BridgeCore({dataDir:path.join(this.profile,'bridge-core'),workspaceDir:path.join(this.profile,'workspaces')}).init();
+    this.bridge=await new BridgeCore({dataDir,workspaceDir}).init();
     await this.bridge.setAccessMode('read_only');
     return this;
   }
