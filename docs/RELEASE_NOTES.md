@@ -4,6 +4,12 @@ The current release candidate is **0.1.0-preview.8**: creator licensing and noti
 
 [Download preview 8](https://github.com/Martin123132/im-ditto/releases/tag/v0.1.0-preview.8) · [Preview 8 changes](releases/0.1.0-preview.8.md)
 
+## Unreleased source changes
+
+- Keep unchanged Bridge clock details and selector labels in place during polling, and reuse date/time formatters. Countdown text, handovers, selection and protected-mode updates still refresh normally.
+- Ignore late clock responses after the panel is removed. Synthetic UI tests cover unchanged content, selection, slow requests, hidden pages and error recovery.
+- The PC Bridge desktop and receipt-history memory fixes live in the separate [PC Bridge source repository](https://github.com/Martin123132/PC-Bridge). This host does not bundle that desktop. Existing preview downloads are unchanged.
+
 ## Earlier versions
 
 These notes are historical records. Their original archives remain separate and unchanged; they are not preview 8 downloads.
